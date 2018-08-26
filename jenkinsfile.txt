@@ -1,0 +1,8 @@
+properties([
+  pipelineTriggers([
+    upstream(
+      threshold: 'SUCCESS',
+      upstreamProjects: '../jobA/master'
+    )
+  ])
+])
